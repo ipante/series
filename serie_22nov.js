@@ -31,6 +31,6 @@ function bifferN(chaine,...lettres){
   for(n=a_retirer.length;n>0;n--){
     tab.splice(n,1);
   }
-  console.log(tab.join(""));
+  document.write(tab.join(""));
 }
 bifferN("Salut","l","a");
