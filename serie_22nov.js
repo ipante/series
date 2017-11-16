@@ -34,3 +34,10 @@ function bifferN(chaine,...lettres){
   document.write(tab.join(""));
 }
 bifferN("Salut","l","a");
+
+// glitcher du texte aléatoirement
+let chaine = "L'OCR ne fonctionne pas à tous les coups
+let tab_glitch = ["s*","ééà._","xxO"];
+Array.from(chaine).forEach(function(lettre){
+  Math.random() < 0.8 ? document.write(lettre) : document.write(tab_glitch[Math.floor(Math.random()*tab_glitch.length)])
+})
