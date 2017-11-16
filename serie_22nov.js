@@ -16,3 +16,21 @@ function biffer(chaine,lettre){
   Array.from(chaine).forEach(function(l){if(l!=lettre){document.write(l)}});
 }
 biffer("Salut","l");
+
+// afficher toutes les lettres sauf les sélectionnées
+function bifferN(chaine,...lettres){
+  let a_retirer = [];
+  let tab = chaine.split("");
+  for(i=0;i<tab.length;i++){
+    for(j=0;j<lettres.length;j++){
+      if(tab[i]==lettres[j]){
+        a_retirer.push(i);
+      }
+    }
+  }
+  for(n=a_retirer.length;n>0;n--){
+    tab.splice(n,1);
+  }
+  console.log(tab.join(""));
+}
+bifferN("Salut","l","a");
