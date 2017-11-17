@@ -64,3 +64,8 @@ let tab_glitch = ["s*","ééà._","xxO"];
 Array.from(chaine).forEach(function(lettre){
   Math.random() < 0.8 ? document.write(lettre) : document.write(tab_glitch[Math.floor(Math.random()*tab_glitch.length)])
 })
+
+// vérifier si une chaîne se termine par une autre
+let str1 = "Salut";
+let str2 = "lut";
+[...str1].splice(str1.length-str2.length,str2.length).join("") == str2 ? true : false
