@@ -68,4 +68,11 @@ Array.from(chaine).forEach(function(lettre){
 // vérifier si une chaîne se termine par une autre
 let str1 = "Salut";
 let str2 = "lut";
-[...str1].splice(str1.length-str2.length,str2.length).join("") == str2 ? true : false
+// tentative 1
+return [...str1].splice(str1.length-str2.length,str2.length).join("") == str2 ? true : false;
+// tentative 2
+return [...str1].splice(str1.length-str2.length,str2.length).join("");
+// tentative 3
+return str2 === str1.substr(str1.length - str2.length, str2.length);
+// tentative 4 (avec documentation)
+return str1.endsWith(str2);
