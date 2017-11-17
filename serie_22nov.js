@@ -1,4 +1,7 @@
-// afficher chaque lettre avec un espace
+// inverser les lettres d'un mot
+"Salut".split('').reverse().join('');
+
+// afficher un espace entre chaque lettre
 Array.from("Salut").forEach(d=>document.write(d+" "))
 
 // afficher chaque lettre à l'envers, avec un espace
