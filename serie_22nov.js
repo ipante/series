@@ -76,3 +76,8 @@ return [...str1].splice(str1.length-str2.length,str2.length).join("");
 return str2 === str1.substr(str1.length - str2.length, str2.length);
 // tentative 4 (avec documentation)
 return str1.endsWith(str2);
+
+// Mettre l'initiale de chaque mot en majuscule
+function creerTitre(chaine){
+  return chaine.split(' ').map( w => w[0].toUpperCase() + w.slice(1)).join(' ');
+}  
