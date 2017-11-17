@@ -8,7 +8,7 @@ Array.from("Salut").forEach(d=>document.write(d+" "))
 Array.from("Salut").reverse().forEach(d=>document.write(d+" "))
 
 // doubler toutes les lettres
-Array.from("Salut").forEach(d=>document.write(d+d))
+[..."Salut"].forEach(d=>document.write(d+d))
 
 // récupérer les paragraphes d'une page et concaténer leur contenu
 let paragraphes = Array.from(document.getElementsByTagName("p"));
@@ -80,4 +80,5 @@ return str1.endsWith(str2);
 // Mettre l'initiale de chaque mot en majuscule
 function creerTitre(chaine){
   return chaine.split(' ').map( w => w[0].toUpperCase() + w.slice(1)).join(' ');
-}  
+}
+
