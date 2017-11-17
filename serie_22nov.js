@@ -10,6 +10,9 @@ Array.from("Salut").reverse().forEach(d=>document.write(d+" "))
 // doubler toutes les lettres
 [..."Salut"].forEach(d=>document.write(d+d))
 
+// ranger un texte par ordre alphabétique
+[..."Mon texte"].sort().join("");
+
 // récupérer les paragraphes d'une page et concaténer leur contenu
 let paragraphes = Array.from(document.getElementsByTagName("p"));
 document.write(paragraphes.reduce((a,b)=>a+" "+b.innerHTML,""));
@@ -81,4 +84,3 @@ return str1.endsWith(str2);
 function creerTitre(chaine){
   return chaine.split(' ').map( w => w[0].toUpperCase() + w.slice(1)).join(' ');
 }
-
