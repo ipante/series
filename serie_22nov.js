@@ -2,13 +2,16 @@
 "Salut".split('').reverse().join('');
 
 // afficher un espace entre chaque lettre
-Array.from("Salut").forEach(d=>document.write(d+" "))
+Array.from("Salut").forEach(d=>document.write(d+" "));
 
 // afficher chaque lettre à l'envers, avec un espace
-Array.from("Salut").reverse().forEach(d=>document.write(d+" "))
+Array.from("Salut").reverse().forEach(d=>document.write(d+" "));
+
+// inverser nom et prénom
+"John Smith".split(" ").reverse().join(" ");
 
 // doubler toutes les lettres
-[..."Salut"].forEach(d=>document.write(d+d))
+[..."Salut"].forEach(d=>document.write(d+d));
 
 // ranger un texte par ordre alphabétique
 [..."Mon texte"].sort().join("");
