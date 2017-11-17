@@ -11,6 +11,10 @@ Array.from("Salut").forEach(d=>document.write(d+d))
 let paragraphes = Array.from(document.getElementsByTagName("p"));
 document.write(paragraphes.reduce((a,b)=>a+" "+b.innerHTML,""));
 
+// compter le nombre de nombres pairs d'un tableau
+[4,5,6,7].filter(function(n){if(n%2==0){return n}}).length; //ES5
+[4,5,6,7].filter((n)=>{if(n%2==0){return n}}).length; //ES6
+
 // afficher toutes les lettres sauf la sélectionnée
 function biffer(chaine,lettre){
   Array.from(chaine).forEach(function(l){if(l!=lettre){document.write(l)}});
