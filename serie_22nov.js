@@ -15,6 +15,22 @@ document.write(paragraphes.reduce((a,b)=>a+" "+b.innerHTML,""));
 [4,5,6,7].filter(function(n){if(n%2==0){return n}}).length; //ES5
 [4,5,6,7].filter((n)=>{if(n%2==0){return n}}).length; //ES6
 
+// trouver le nombre le plus grand dans un tableau
+// ES5
+function plusGrand(tab) {
+  var max = tab[0];
+  for(var i = 1; i < tab.length; i++) {
+    if(max < tab[i]) {
+       max = tab[i];
+    }
+  }
+  return max;
+}
+// ES5 avec Apply
+Math.max.apply(Math,[4,5,6])
+// ES6
+Math.max(...[4,5,6]));
+
 // afficher toutes les lettres sauf la sélectionnée
 function biffer(chaine,lettre){
   Array.from(chaine).forEach(function(l){if(l!=lettre){document.write(l)}});
