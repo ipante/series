@@ -87,3 +87,9 @@ return str1.endsWith(str2);
 function creerTitre(chaine){
   return chaine.split(' ').map( w => w[0].toUpperCase() + w.slice(1)).join(' ');
 }
+
+// récupérer toutes les url des images d'une page
+// et les mettre dans un tableau
+let t_url = [];
+document.querySelectorAll("img")
+  .forEach((el)=>t_url.push(el.src));
