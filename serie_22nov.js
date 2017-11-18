@@ -5,6 +5,7 @@
 Array.from("Salut").forEach(d=>document.write(d+" "));
 
 // afficher chaque lettre à l'envers, avec un espace
+// plus simple avec ".reverse()" et "..." 
 Array.from("Salut").reverse().forEach(d=>document.write(d+" "));
 
 // inverser nom et prénom
