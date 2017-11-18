@@ -22,7 +22,7 @@ document.write(paragraphes.reduce((a,b)=>a+" "+b.innerHTML,""));
 
 // compter le nombre de nombres pairs d'un tableau
 [4,5,6,7].filter(function(n){if(n%2==0){return n}}).length; //ES5
-[4,5,6,7].filter((n)=>{if(n%2==0){return n}}).length; //ES6
+[4,5,6,7].filter(n=>{if(n%2==0){return n}}).length; //ES6
 
 // trouver le nombre le plus grand dans un tableau
 // ES5
@@ -92,4 +92,18 @@ function creerTitre(chaine){
 // et les mettre dans un tableau
 let t_url = [];
 document.querySelectorAll("img")
-  .forEach((el)=>t_url.push(el.src));
+  .forEach(el=>t_url.push(el.src));
+
+// récupérer toutes les url des images d'une page
+// ainsi que ses attributs "alt"
+// et les mettre dans un objet
+let to_url = [];
+document.querySelectorAll("img")
+  .forEach(function(el){
+    let o = {'src':el.src, 'alt':el.alt};
+    to_url.push(o);
+});
+// version raccourcie (ES6)
+let to_url = [];
+document.querySelectorAll("img")
+  .forEach(el => to_url.push({'src':el.src, 'alt':el.alt}));
