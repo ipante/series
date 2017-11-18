@@ -18,6 +18,20 @@ Array.from("Salut").reverse().forEach(d=>document.write(d+" "));
 // ranger un texte par ordre alphabétique
 [..."Mon texte"].sort().join("");
 
+// répéter 3 fois une chaîne
+function repeter3(chaine){return chaine+chaine+chaine}
+"Mon texte".repeat(3); // ES6
+
+// répéter n fois une chaine
+function repeter(chaine,n){
+  let resultat = '';
+  for(let i=0;i<n,i++){
+    resultat+=chaine;
+  }
+  return chaine;
+}
+function repeter(chaine,n){return chaine.repeat(n)} // ES6
+
 // récupérer les paragraphes d'une page et concaténer leur contenu
 let paragraphes = Array.from(document.getElementsByTagName("p"));
 document.write(paragraphes.reduce((a,b)=>a+" "+b.innerHTML,""));
