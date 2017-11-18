@@ -1,4 +1,5 @@
 // inverser les lettres d'un mot
+// utiliser : 'split'
 "Salut".split('').reverse().join('');
 
 // afficher un espace entre chaque lettre
@@ -39,7 +40,7 @@ function plusGrand(tab) {
 // ES5 avec Apply
 Math.max.apply(Math,[4,5,6])
 // ES6
-Math.max(...[4,5,6]));
+Math.max(...[4,5,6]);
 
 // afficher toutes les lettres sauf la sélectionnée
 function biffer(chaine,lettre){
