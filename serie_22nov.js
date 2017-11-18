@@ -107,3 +107,8 @@ document.querySelectorAll("img")
 let to_url = [];
 document.querySelectorAll("img")
   .forEach(el => to_url.push({'src':el.src, 'alt':el.alt}));
+
+// enlever les signes d'une chaîne téléphonique
+// exemple : passer de "(078) 622-17-17" à "0786221717"
+"(078) 622-17-17".split(/[()-/>\s]/).join('');
+"(078) 622-17-17".replace(/[()-/>\s]/g,'');
