@@ -20,6 +20,15 @@ Array.from("Salut").reverse().forEach(d=>document.write(d+" "));
 // ranger un texte par ordre alphabétique
 [..."Mon texte"].sort().join("");
 
+// ranger une série de nombre par ordre croissant. 
+[3,7,2,3,4,1].sort().join(" ");
+
+// ranger une série de nombre par ordre décroissant. 
+[3,7,2,3,4,1].sort(function(a, b) {
+  return b - a;
+}).join(" ");
+[3,7,2,3,4,1].sort((a,b)=>b-a).join(" ");
+
 // répéter 3 fois une chaîne
 function repeter3(chaine){return chaine+chaine+chaine}
 "Mon texte".repeat(3); // ES6
@@ -112,6 +121,22 @@ return str1.endsWith(str2);
 function creerTitre(chaine){
   return chaine.split(' ').map( w => w[0].toUpperCase() + w.slice(1)).join(' ');
 }
+//autre version
+function makeTitle(str) {
+  let arraySplit = []
+  let arraySplit2 = []
+  let strSplit = str.split(/\'|\s/gi);
+  for (let i = 0; i < strSplit.length; i++){
+    arraySplit.push(strSplit[i].split(""));
+    arraySplit[i][0] = String(arraySplit[i][0]).toUpperCase();
+     }
+  for (let j = 0; j < strSplit.length; j++){
+    arraySplit2.push(arraySplit[j].join(""));
+  }
+  return arraySplit2.join(" ");
+ 
+}
+console.log(makeTitle("j'aime les pommes"));
 
 // récupérer toutes les url des images d'une page
 // et les mettre dans un tableau
@@ -137,21 +162,3 @@ document.querySelectorAll("img")
 // exemple : passer de "(078) 622-17-17" à "0786221717"
 "(078) 622-17-17".split(/[()-/>\s]/).join('');
 "(078) 622-17-17".replace(/[()-/>\s]/g,'');
-
-// mettre la première lettre de chaque mot en majuscule
-// exemple : j'aime les pommes -> J Aime Les Pommes
-function makeTitle(str) {
-  let arraySplit = []
-  let arraySplit2 = []
-  let strSplit = str.split(/\'|\s/gi);
-  for (let i = 0; i < strSplit.length; i++){
-    arraySplit.push(strSplit[i].split(""));
-    arraySplit[i][0] = String(arraySplit[i][0]).toUpperCase();
-     }
-  for (let j = 0; j < strSplit.length; j++){
-    arraySplit2.push(arraySplit[j].join(""));
-  }
-  return arraySplit2.join(" ");
- 
-}
-console.log(makeTitle("j'aime les pommes"));
