@@ -89,6 +89,13 @@ Array.from(chaine).forEach(function(lettre){
   Math.random() < 0.8 ? document.write(lettre) : document.write(tab_glitch[Math.floor(Math.random()*tab_glitch.length)])
 })
 
+// vérifier si un mot est un isogramme (chaque lettre est différente)
+function isIsogram(str) {
+  for (let i = 0; i < str.length; i++){
+    str.toLowerCase().split("").sort()[i] == str.toLowerCase().split("").sort()[i+1] ? false : true;
+    }
+}
+
 // vérifier si une chaîne se termine par une autre
 let str1 = "Salut";
 let str2 = "lut";
@@ -130,3 +137,21 @@ document.querySelectorAll("img")
 // exemple : passer de "(078) 622-17-17" à "0786221717"
 "(078) 622-17-17".split(/[()-/>\s]/).join('');
 "(078) 622-17-17".replace(/[()-/>\s]/g,'');
+
+// mettre la première lettre de chaque mot en majuscule
+// exemple : j'aime les pommes -> J Aime Les Pommes
+function makeTitle(str) {
+  let arraySplit = []
+  let arraySplit2 = []
+  let strSplit = str.split(/\'|\s/gi);
+  for (let i = 0; i < strSplit.length; i++){
+    arraySplit.push(strSplit[i].split(""));
+    arraySplit[i][0] = String(arraySplit[i][0]).toUpperCase();
+     }
+  for (let j = 0; j < strSplit.length; j++){
+    arraySplit2.push(arraySplit[j].join(""));
+  }
+  return arraySplit2.join(" ");
+ 
+}
+console.log(makeTitle("j'aime les pommes"));
