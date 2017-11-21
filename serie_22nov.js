@@ -4,10 +4,12 @@
 
 // afficher un espace entre chaque lettre
 Array.from("Salut").forEach(d=>document.write(d+" "));
+"Salut".split("").join(" ");
 
 // afficher chaque lettre à l'envers, avec un espace
 // plus simple avec ".reverse()" et "..." 
 Array.from("Salut").reverse().forEach(d=>document.write(d+" "));
+"Salut".split("").reverse().join(" ");
 
 // inverser nom et prénom
 "John Smith".split(" ").reverse().join(" ");
