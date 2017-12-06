@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            margin: 0 auto;
+            width: 600px;
+            background-color: black;
+            font-family: calibri;
+        }
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: gray;
+            font-size: 8px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+            font-family: verdana;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .occupe{
+            background-color: red;
+        }
+    </style>    
+</head>
+<body>
+    <p>Places restantes: <span id="places"></span></p>
+    <script>
+        // variable places
+        let places = 120;
+
+        // vérification de l'existence d'un tableau cinéma en localStorage
+        if(localStorage.salle_cinema != null){
+            salle_cinema = JSON.parse(localStorage.salle_cinema);
+            document.getElementById("places").innerHTML = places;
+        }
+        else{
+            salle_cinema = [];
+        }
+
+        let compteurRangee = 0;
+        let compteurSiege = 0; 
+        let placesRestantes = places;
+
+        for(let n=0; n<places; n++){
+            compteurSiege++;
+            if(n%20==0){
+                compteurRangee++;
+                compteurSiege = 1;
+                let br = document.createElement('br');
+                document.body.appendChild(br);
+            }
+            let siege = document.createElement('span');
+            // création de l'identifiant de siège
+            let id_place = String.fromCharCode(compteurRangee+64)+compteurSiege;
+            siege.id=id_place;
+            siege.innerHTML = id_place;
+            if(salle_cinema.includes(id_place)){
+            siege.className = 'occupe';
+            placesRestantes--;
+            document.getElementById('places').innerHTML = placesRestantes;
+            }
+            siege.addEventListener('click',function(){
+                if(this.className != "occupe"){
+                    this.className = "occupe";
+                    placesRestantes--;
+                    salle_cinema.push(this.id);
+                    localStorage.salle_cinema = JSON.stringify(salle_cinema);
+                    document.getElementById("places").innerHTML = placesRestantes;
+                }
+                else{
+                    placesRestantes++;
+                    let emplacement_tableau = salle_cinema.indexOf(this.id);
+                    salle_cinema.splice(emplacement_tableau, 1);
+                    localStorage.salle_cinema = JSON.stringify(salle_cinema);
+                    document.getElementById("places").innerHTML = placesRestantes;                
+                    this.className = '';
+                }    
+            });
+            document.body.appendChild(siege);
+        }    
+    </script>
+</body>
+</html>
