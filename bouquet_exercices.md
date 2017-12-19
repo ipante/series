@@ -71,7 +71,7 @@ Lorsque l'utilsateur passe la souris sur une cellule, le nombre augmente de 1 et
 
 ==== Affichage de tableau+++, DOM+++, conditions et boucles++ ==== 
 
-1.Sans utiliser de HTML (donc en le générant via javascript), afficher le tableau "tab" sous [cette forme](https://img15.hostingpics.net/pics/120994lue.png). 
+1. Sans utiliser de HTML (donc en le générant via javascript), afficher le tableau "tab" sous [cette forme](https://img15.hostingpics.net/pics/120994lue.png). 
 2. Lorsque l'utilisateur passe la souris sur une case rouge, elle devient violette (et rien ne se passe sur une case verte).
 3. Si toutes les cases rouges deviennent violettes, le tableau disparaît. 
 
