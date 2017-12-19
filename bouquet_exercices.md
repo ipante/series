@@ -49,7 +49,7 @@ But de la série: savoir utiliser différentes méthodes pour modifier un tablea
 [Solutions de la série](https://codepen.io/GregoryThonney/pen/GyZNVO)
 
 
-====Création de tableau 1 ====
+==== Affichage de tableau+++, DOM++, conditions et boucles++ ====
 
 Générer une Heat Map à partir de ce tableau : const tab = \[
   2,2,2,2,2,2,5,2,2,3,2,2,2,2,2,2,2,2,2,
@@ -69,7 +69,7 @@ Lorsque l'utilsateur passe la souris sur une cellule, le nombre augmente de 1 et
 
 
 
-==== Création de tableau 2 ==== 
+==== Affichage de tableau+++, DOM+++, conditions et boucles++ ==== 
 
 1.Sans utiliser de HTML (donc en le générant via javascript), afficher le tableau "tab" sous [cette forme](https://img15.hostingpics.net/pics/120994lue.png). 
 2. Lorsque l'utilisateur passe la souris sur une case rouge, elle devient violette (et rien ne se passe sur une case verte).
@@ -88,3 +88,40 @@ tab = \[
 \];
 
 [Solution](https://codepen.io/isaacpante/pen/rYpWRw)
+
+
+==== Affichage de tableau+++, DOM+++, conditions et boucles+ ==== 
+
+Créer une page permettant de choisir son siège dans une salle de cinéma :
+1. Les places sont numérotées selon la rangée (A, B, C...) et selon la colonne (1, 2, 3, etc.). 
+2. Lorsque l'utilisateur clique sur un siège, sa couleur change pour indiquer qu'il est occupé.
+3. Indiquer par un compteur le nombre de places restantes. 
+
+[Solution](https://codepen.io/isaacpante/pen/POvPaX)
+
+
+==== Affichage de tableau+++, boucles et conditions+++ ====
+
+1. En utilisant des boucles, générez un tableau de cinq lignes et de cinq colonnes. Chaque ligne est numérotée de 1 à 5.
+2. Définissez une couleur pour vos cellules. 
+3. modifiez votre code pour que :
+    1. [une colonne sur deux ait une couleur différente.](https://codepen.io/isaacpante/pen/woJzOQ)
+    2. [une ligne sur deux ait une couleur différente.](https://codepen.io/isaacpante/pen/NbpbXW)
+    2. [une des diagonales de votre tableau ait une couleur différente.](https://codepen.io/isaacpante/pen/qqraxa)
+    2. [les deux diagonales se démarquent par un changement de couleur.](https://codepen.io/isaacpante/pen/KNWmoV)
+    2. [les bords du tableau aient une autre couleur que le reste.](https://codepen.io/isaacpante/pen/dOvWMJ)
+    2. [votre tableau ressemble à un échiquier.](https://codepen.io/isaacpante/pen/eBvdwp)
+    2. [l'utilisateur puisse choisir le nombre de lignes et de colonnes](https://codepen.io/GregoryThonney/pen/zEQgxg).
+
+
+==== DOM+++ ==== 
+
+1. Générer une calculette: 
+        1. Créer 10 boutons de 0 à 9. 
+        2. Créer les boutons "+", "-" et "=". 
+        3. Rendre le tout fonctionnel. ;) 
+[Solution](https://codepen.io/GregoryThonney/pen/LzrPaa)
+
+
+
+
