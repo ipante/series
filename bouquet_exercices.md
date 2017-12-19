@@ -46,7 +46,7 @@ But de la série: savoir utiliser différentes méthodes pour modifier un tablea
 
 21. // enlever les signes d'une chaîne téléphonique (exemple : passer de "(078) 622-17-17" à "0786221717")
 
-[Solution de la série](https://codepen.io/GregoryThonney/pen/GyZNVO). 
+[Solutions de la série](https://codepen.io/GregoryThonney/pen/GyZNVO)
 
 
 ====Création de tableau 1 ====
@@ -65,14 +65,15 @@ Générer une Heat Map à partir de ce tableau : const tab = \[
 
 Lorsque l'utilsateur passe la souris sur une cellule, le nombre augmente de 1 et la couleur change et devient plus foncée. 
 
-[Solution](https://codepen.io/GregoryThonney/pen/EoajLv). 
+[Solution](https://codepen.io/GregoryThonney/pen/EoajLv)
+
 
 
 ==== Création de tableau 2 ==== 
 
 1.Sans utiliser de HTML (donc en le générant via javascript), afficher le tableau "tab" sous [cette forme](https://img15.hostingpics.net/pics/120994lue.png). 
 2. Lorsque l'utilisateur passe la souris sur une case rouge, elle devient violette (et rien ne se passe sur une case verte).
-3. Si toutes les cases rouges diviennent violettes, le tableau disparaît. 
+3. Si toutes les cases rouges deviennent violettes, le tableau disparaît. 
 
 tab = \[
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
@@ -85,3 +86,5 @@ tab = \[
   0,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,0,2,
   0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
 \];
+
+[Solution](https://codepen.io/isaacpante/pen/rYpWRw)
