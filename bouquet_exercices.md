@@ -117,9 +117,10 @@ Créer une page permettant de choisir son siège dans une salle de cinéma :
 ==== DOM+++ ==== 
 
 1. Générer une calculette: 
-        1. Créer 10 boutons de 0 à 9. 
-        2. Créer les boutons "+", "-" et "=". 
-        3. Rendre le tout fonctionnel. ;) 
+    1. Créer 10 boutons de 0 à 9. 
+    2. Créer les boutons "+", "-" et "=". 
+    3. Rendre le tout fonctionnel. ;) 
+    
 [Solution](https://codepen.io/GregoryThonney/pen/LzrPaa)
 
 
