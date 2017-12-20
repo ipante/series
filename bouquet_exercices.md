@@ -124,5 +124,9 @@ Créer une page permettant de choisir son siège dans une salle de cinéma :
 [Solution](https://codepen.io/GregoryThonney/pen/LzrPaa)
 
 
+==== DOM++, Affichage de tableau++, boucles et conditions+++ ====
 
+Créer un tic-tac-toe en ajoutant les conditions de victoire. 
+
+[Solution](https://codepen.io/GregoryThonney/pen/vpEmGR)
 
